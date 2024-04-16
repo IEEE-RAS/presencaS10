@@ -29,12 +29,12 @@ void button_detection(int entrada)
 {
   if (entrada == 1)
   {
-
-    unsigned long millis_to_mintues(unsigned long millis)
-    {
-      return millis / 60000;
-    }
   }
+}
+
+unsigned long millis_to_mintues(unsigned long millis)
+{
+  return millis / 60000;
 }
 
 void setup()
