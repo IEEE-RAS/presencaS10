@@ -49,7 +49,6 @@ app.post("/auth/generateToken", (req, res) => {
         time: Date(),
         userId: 12,
     }
-
     const token = jwt.sign(data, jwtSecretKey);
 
     res.send(token);
@@ -67,6 +66,8 @@ app.get("/auth/validateToken", (req, res) => {
 
     try {
         const decoded = jwt.verify(token, secret);
+        console.log(decoded);
+        
         return res.send("Token verificado");
     } catch (error) {
         console.log(error);
